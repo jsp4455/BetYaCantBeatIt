@@ -1,0 +1,10 @@
+{
+  "name": "folly-snake",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "javascript-obfuscator public --output public"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.0"
+  }
+}

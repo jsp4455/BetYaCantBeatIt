@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="top-left">Rich Folly Gaming</div>
+
+<!-- WASD UNLOCK POPUP -->
+<div id="wasdPopup">
+  <div id="wasdBox">
+    <h2>WASD Unlocked!</h2>
+    <p>You can now use W A S D to move.</p>
+    <button id="closeWasd">OK</button>
+  </div>
+</div>
+
+<div id="levelText">LEVEL 1</div>
+<div id="scoreText">SCORE: 0</div>
+
+<!-- PAYWALL -->
+<div id="paywall">
+  <div class="payBox">
+    <h2>GAME LOCKED</h2>
+    <p>Join the Discord & request access</p>
+
+    <a href="https://discord.gg/UpRXeKM6z" target="_blank"
+       style="color:black; font-weight:bold; text-decoration:underline; display:block; margin-bottom:5px;">
+       Join Discord Server
+    </a>
+
+    <input id="discordName" placeholder="Your Discord Username (required)">
+    <textarea id="requestMsg" placeholder="Type your message here..."></textarea>
+
+    <button id="sendRequestBtn">Send Request</button>
+    <p id="sentNotice" style="display:none; margin-top:10px; color:black;">Request sent. Wait for approval.</p>
+
+    <input id="unlockCodeInput" placeholder="Enter unlock code" style="margin-top:15px; display:none;">
+    <button id="unlockBtn" style="display:none;">Unlock</button>
+  </div>
+</div>
+
+<canvas id="game" width="400" height="400"></canvas>
+
+<audio id="winSong" src="Whatever_it_takes.mp3"></audio>
+
+<div id="tryAgainOverlay">
+  <div class="tryText">TRY AGAIN</div>
+  <button id="restartBtn">Restart</button>
+  <div id="helpBtn">?</div>
+</div>
+
+<div id="helpPopup">
+  <div id="helpContent">
+    <h2>HOW TO PLAY</h2>
+
+    <p><strong>Movement:</strong><br>
+    • Arrow Keys<br>
+    • On-screen buttons<br>
+    • Move one direction at a time.</p>
+
+    <p><strong>Goal:</strong><br>
+    Eat red food. Every 5 points = level up.</p>
+
+    <p><strong>Dangers:</strong><br>
+    • Walls (Level 4)<br>
+    • Your body<br>
+    • Fake food (Level 8)<br>
+    • Aggressive fake food (20+)<br>
+    • Moving food (6+)</p>
+
+    <p><strong>Win:</strong><br>
+    Level 200 + Score 1000+</p>
+
+    <button id="closeHelp">Close</button>
+  </div>
+</div>
+
+<div class="footer">{A.R.T.S}</div>
+
+<div id="touchControls">
+  <div class="row">
+    <div class="cbtn" id="upBtn">💸</div>
+  </div>
+  <div class="row">
+    <div class="cbtn" id="leftBtn">💵</div>
+    <div class="cbtn" id="downBtn">💸</div>
+    <div class="cbtn" id="rightBtn">💵</div>
+  </div>
+</div>
+
+<script src="ui.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
