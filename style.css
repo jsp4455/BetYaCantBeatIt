@@ -308,4 +308,7 @@
   width: auto;
   height: auto;
 }
-
+/* Optional glow */
+#follyBtn:hover::after {
+  box-shadow: 0 0 10px #00ffea;
+}
